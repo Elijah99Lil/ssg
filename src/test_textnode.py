@@ -21,6 +21,5 @@ class TestTextNode(unittest.TestCase):
         node = TextNode("This is a text node", TextType.LINK, url=None)
         self.assertIsNone(node.url)
 
-
 if __name__ == "__main__":
     unittest.main()
