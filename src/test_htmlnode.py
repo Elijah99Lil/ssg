@@ -2,7 +2,7 @@ import unittest
 from htmlnode import *
 
 class TestHTMLNode(unittest.TestCase):
-    #HTML tests
+#HTML tests
     def test_props_to_html(self):
         node = HTMLNode(tag="a", props={"href": "https://google.com"})
         self.assertEqual(node.props_to_html(),  ' href="https://google.com"')
@@ -15,7 +15,7 @@ class TestHTMLNode(unittest.TestCase):
         node = HTMLNode(value="*jumps down from the top of the fridge* I'm gay!")
         self.assertEqual(node.props_to_html(), "")
 
-    #LeafNode tests
+#LeafNode tests
     def test_to_html_value_tag(self):
         node = LeafNode(tag="p", value="PEEPEEPOOPOO")
         self.assertEqual(node.to_html(), "<p>PEEPEEPOOPOO</p>")
@@ -29,7 +29,7 @@ class TestHTMLNode(unittest.TestCase):
         with self.assertRaises(ValueError):
             node.to_html()
 
-    #ParentNode tests
+#ParentNode tests
     def test_multiple_children(self):
         node = ParentNode("div", 
             [LeafNode("p", "Child 1"),

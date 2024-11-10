@@ -3,7 +3,7 @@ from textnode import *
 import pytest
 
 class TestTextNode(unittest.TestCase):
-    #Test TextNode class
+#TextNode class tests
     def test_eq(self):
         node = TextNode("This is a text node", TextType.BOLD)
         node2 = TextNode("This is a text node", TextType.BOLD)
@@ -23,7 +23,7 @@ class TestTextNode(unittest.TestCase):
         node = TextNode("This is a text node", TextType.LINK, url=None)
         self.assertIsNone(node.url)
 
-    #Test handling text type methods
+#Handling different text type method tests
     def test_text(self):
         text_node = TextNode("This is a text test.", TextType.TEXT)
         html_node = text_node_to_html_node(text_node)
