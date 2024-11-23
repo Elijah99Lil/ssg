@@ -1,6 +1,6 @@
 import unittest
 from textnode import TextNode, TextType, text_node_to_html_node
-import pytest
+import pytest # type: ignore
 
 class TestTextNode(unittest.TestCase):
 #TextNode class tests
